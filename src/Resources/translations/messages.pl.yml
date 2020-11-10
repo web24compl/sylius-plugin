@@ -1,0 +1,11 @@
+bluemedia_sylius_bluepayment_plugin:
+  custom_name: 'BlueMedia płatności online'
+  currency: 'Waluta'
+  form:
+    gateway_configuration:
+      test_mode: 'Użyj środowiska testowego'
+      service_id: 'Identyfikator serwisu partnera'
+      shared_key: 'Klucz współdzielony'
+
+  messages:
+    no_currencies_found: 'Nie odnaleziono żadnych walut. Konfiguracja pluginu niemożliwa.'

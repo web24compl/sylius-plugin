@@ -1,0 +1,23 @@
+{{ form_row(bluepaymentForm.factoryName) }}
+{{ form_row(attribute(bluepaymentForm.children.config.children, 'test_mode')) }}
+
+{% set i = 0 %}
+{% for field in bluepaymentForm.config %}
+    {% if 'currency' in field.vars.name %}
+        <div class="ui segment">
+            <h4 class="ui dividing header">{{ 'bluemedia_sylius_bluepayment_plugin.currency'|trans }} {{ field.vars.value }}</h4>
+
+            <p>
+                {{ form_row(attribute(bluepaymentForm.children.config.children, 'currency_' ~ i)) }}
+                {{ form_row(attribute(bluepaymentForm.children.config.children, 'service_id_' ~ field.vars.value)) }}
+                {{ form_row(attribute(bluepaymentForm.children.config.children, 'shared_key_' ~ field.vars.value)) }}
+            </p>
+        </div>
+        {% set i = i + 1 %}
+    {% endif %}
+{% else %}
+    <div class="ui mini message center float">
+        {{ 'bluemedia_sylius_bluepayment_plugin.messages.no_currencies_found'|trans }}
+    </div>
+{% endfor %}
+

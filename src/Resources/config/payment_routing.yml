@@ -1,0 +1,11 @@
+bluepayment_back_form_gateway:
+  path: /payment/back
+  methods: [GET]
+  defaults:
+    _controller: bluemedia_sylius_bluepayment_plugin.controller.transaction_confirmation:processConfirmation
+
+bluepayment_transaction_itn:
+  path: /process-itn
+  methods: [POST]
+  defaults:
+    _controller: bluemedia_sylius_bluepayment_plugin.itn.controller:processAction

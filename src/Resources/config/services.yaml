@@ -1,0 +1,60 @@
+services:
+    bluemedia_sylius_bluepayment_plugin.gateway_factory.bluepayment:
+        class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
+        arguments:
+            - Bluemedia\SyliusBluepaymentPlugin\Factory\BluepaymentGatewayFactory
+        tags:
+            - { name: payum.gateway_factory_builder, factory: bluepayment }
+
+    bluemedia_sylius_bluepayment_plugin.form.extension.bluepayment_gateway_config:
+        class: Bluemedia\SyliusBluepaymentPlugin\Form\Type\GatewayConfigType
+        arguments:
+            - '@sylius.repository.currency'
+        tags:
+            - { name: sylius.gateway_configuration_type, type: bluepayment, label: bluemedia_sylius_bluepayment_plugin.custom_name }
+            - { name: form.type }
+
+    bluemedia_sylius_bluepayment_plugin.form.extension.shared_key_existence_validator:
+        class: Bluemedia\SyliusBluepaymentPlugin\Validator\Constraints\FieldRequiredWithValidator
+        tags:
+            - { name: validator.constraint_validator }
+
+    bluemedia_sylius_bluepayment_plugin.capture_action.bluepayment:
+        class: Bluemedia\SyliusBluepaymentPlugin\Action\CaptureAction
+        public: true
+        arguments:
+            - '@sylius.context.currency'
+            - '@sylius.currency_converter'
+        tags:
+            - { name: payum.action, factory: bluepayment, alias: payum.action.capture }
+
+    bluemedia_sylius_bluepayment_plugin.filter.payment_list_filter:
+        class: Bluemedia\SyliusBluepaymentPlugin\Filter\PaymentListFilter
+        arguments:
+            - '@sylius.context.currency'
+            - '@payum.dynamic_gateways.config_storage'
+
+    bluemedia_sylius_bluepayment_plugin.form.type.payment_list:
+        class: Bluemedia\SyliusBluepaymentPlugin\Form\Type\BluepaymentMethodChoiceType
+        arguments:
+            - '@sylius.payment_methods_resolver'
+            - '@sylius.repository.payment_method'
+            - '@bluemedia_sylius_bluepayment_plugin.filter.payment_list_filter'
+        tags:
+            - { name: form.type_extension, extended_type: Sylius\Bundle\PaymentBundle\Form\Type\PaymentMethodChoiceType }
+
+    bluemedia_sylius_bluepayment_plugin.controller.transaction_confirmation:
+        class: Bluemedia\SyliusBluepaymentPlugin\Transaction\Controller\TransactionConfirmationController
+        public: true
+        arguments:
+            - "@sylius.repository.order"
+            - "@router"
+
+    bluemedia_sylius_bluepayment_plugin.itn.controller:
+        class: Bluemedia\SyliusBluepaymentPlugin\Itn\Controller\ItnController
+        public: true
+        arguments:
+            - '@sylius.repository.order'
+            - '@payum.dynamic_gateways.config_storage'
+            - "@sylius.repository.payment"
+            - "@logger"

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transactionList>
+    <serviceID>123456</serviceID>
+    <transactions>
+        <transaction>
+            <orderID>123</orderID>
+            <remoteID>102686</remoteID>
+            <amount>500.00</amount>
+            <currency>PLN</currency>
+            <gatewayID>106</gatewayID>
+            <paymentDate>20200621171238</paymentDate>
+            <paymentStatus>SUCCESS</paymentStatus>
+            <paymentStatusDetails>ACCEPTED</paymentStatusDetails>
+        </transaction>
+    </transactions>
+    <hash>de8dd54fc033ca5b276ef779d2194a3c9cdacfc87303c85d3e9a770034753346</hash>
+</transactionList>

@@ -1,0 +1,32 @@
+suites:
+    main:
+        namespace: Bluemedia\SyliusBluepaymentPlugin
+        psr4_prefix: Bluemedia\SyliusBluepaymentPlugin
+
+extensions:
+  FriendsOfPhpSpec\PhpSpec\CodeCoverage\CodeCoverageExtension:
+    # Specify a list of formats in which code coverage report should be
+    # generated.
+    # Default: [html]
+    format:
+      #- text
+      #- html
+      - clover
+      #- php
+      #- xml
+
+    # Specify output file/directory where code coverage report will be
+    # generated. You can configure different output file/directory per
+    # enabled format.
+    # Default: coverage
+    output:
+      #html: coverage
+      clover: reports/clover.xml
+      #php: coverage.php
+      #xml: coverage
+
+    whitelist:
+      - src
+
+    blacklist:
+      - src/DependencyInjection #standard sylius plugin files

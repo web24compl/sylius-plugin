@@ -1,0 +1,4 @@
+bluemedia_sylius_bluepayment_plugin:
+  form:
+    gateway_configuration:
+      required_with: Zarówno identyfikator serwisu partnera jak i klucz współdzielony są wymagane.

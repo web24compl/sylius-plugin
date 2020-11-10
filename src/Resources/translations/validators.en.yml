@@ -1,0 +1,4 @@
+bluemedia_sylius_bluepayment_plugin:
+  form:
+    gateway_configuration:
+      required_with: Both fields "Partner's website ID" and "Shared key" are required.

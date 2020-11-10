@@ -1,0 +1,11 @@
+bluemedia_sylius_bluepayment_plugin:
+  custom_name: 'BM online payments'
+  currency: 'Currency'
+  form:
+    gateway_configuration:
+      test_mode: 'Use the test environment'
+      service_id: "Partner's website ID"
+      shared_key: 'Shared key'
+
+  messages:
+    no_currencies_found: 'No currencies found. Plugin unable to configure.'

@@ -1,0 +1,13 @@
+acme_sylius_example_shop:
+    resource: "@BluemediaSyliusBluepaymentPlugin/Resources/config/shop_routing.yml"
+    prefix: /{_locale}
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
+
+acme_sylius_example_admin:
+    resource: "@BluemediaSyliusBluepaymentPlugin/Resources/config/admin_routing.yml"
+    prefix: /admin
+
+bluemedia_sylius_bluepayment_payment:
+    resource: "@BluemediaSyliusBluepaymentPlugin/Resources/config/payment_routing.yml"
+    prefix: /bluepayment
