@@ -1,5 +1,5 @@
 {
-    "name": "bluemedia/sylius-payment-plugin",
+    "name": "bluepayment-plugin/sylius-plugin",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin", "sylius-payment-plugin", "bluepayment", "blue media", "bluemedia"],
     "description": "Blue Media Payment Plugin for Sylius based ecommerce",
