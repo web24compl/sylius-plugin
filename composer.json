@@ -6,8 +6,8 @@
     "license": "LGPL-3.0-only",
     "require": {
         "php": "^7.3",
-        "sylius/sylius": "^1.7",
-        "bluepayment-plugin/bm-sdk": "1.0.0"
+        "sylius/sylius": "^1.7.4",
+        "bluepayment-plugin/bm-sdk": "1.0.1"
     },
     "require-dev": {
         "behat/behat": "^3.6.1",
@@ -47,7 +47,5 @@
             "Tests\\Bluemedia\\SyliusBluepaymentPlugin\\": "tests/"
         },
         "classmap": ["tests/Application/Kernel.php"]
-    },
-    "minimum-stability": "RC",
-    "prefer-stable": true
+    }
 }

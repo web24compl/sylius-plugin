@@ -67,7 +67,7 @@ final class CaptureAction implements ActionInterface, ApiAwareInterface
             $payment->setCurrencyCode($this->currencyContext->getCurrencyCode());
         }
 
-        $result = $client->doTransactionStandard(TransactionStandardBuilder::build($this->api, $payment));
+        $result = $client->getTransactionRedirect(TransactionStandardBuilder::build($this->api, $payment));
 
         $payment->setAmount($oldAmount);
         $payment->setCurrencyCode($oldCurrency);

@@ -12,7 +12,7 @@ Repozytorium zawiera kod oficjalnego rozszerzenia Blue Media S.A. umożliwiając
 
 ## Instalacja
 ``` bash
-$ composer require bluepayment-plugin/sylius-payment-plugin
+$ composer require bluepayment-plugin/sylius-plugin
 ```
 ## Konfiguracja
 Aktualna instrukcja konfiguracji rozszerzenia znajduje się w katalogu `docs` repozytorium.
