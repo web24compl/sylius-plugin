@@ -48,7 +48,7 @@ cp -R vendor/bluepayment-plugin/sylius-plugin/src/Resources/views/* templates/bu
 8. Przejdź do konfiguracji modułu
 
 
-## Konfiguracja1
+## Konfiguracja
 ### Konfiguracja podstawowych pól wtyczki
 
 1. Kod – nazwa własna wtyczki, np. Płatności Blue Media
