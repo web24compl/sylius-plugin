@@ -67,8 +67,8 @@ cp -R vendor/bluepayment-plugin/sylius-plugin/src/Resources/views/* templates/bu
 
 Upewnij się, że w panelach administracyjnych Blue Media https://oplacasie.bm.pl oraz https://oplacasie-accept.bm.pl poniższe pola zawierają poprawne adresy sklepu:
 
-●	adres powrotu do płatności
+-	adres powrotu do płatności
 	https://domena-sklepu.pl/bluepayment/payment/back
-●	adres, na który jest wysyłany ITN
+-	adres, na który jest wysyłany ITN
 	https://domena-sklepu.pl/bluepayment/process-itn 
 
