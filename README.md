@@ -20,6 +20,7 @@ Do najważniejszych funkcji modułu zalicza się:
 Wersja 1.0.0
 •	Pierwsza wersja dokumentu
 
+
 ## Instalacja
 1. Pobierz wtyczkę [tutaj.](https://github.com/bluepayment-plugin/sylius-plugin/archive/refs/heads/master.zip)
 2. Wykonaj polecenie:
