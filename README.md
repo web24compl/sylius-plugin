@@ -12,13 +12,13 @@ Do najważniejszych funkcji modułu zalicza się:
 - przekierowanie na paywall/bramkę Blue media, gdzie są dostępne wszystkie formy płatności 
 
 ### Wymagania
-●	PHP w wersji 7.3 lub nowszej
-●	Sylius w wersji 1.7.4 lub nowszej
+- PHP w wersji 7.3 lub nowszej
+- Sylius w wersji 1.7.4 lub nowszej
 
 ### Opis zmian
 
 Wersja 1.0.0
-•	Pierwsza wersja dokumentu
+- Pierwsza wersja dokumentu
 
 
 ## Instalacja
