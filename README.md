@@ -47,7 +47,6 @@ cp -R vendor/bluepayment-plugin/sylius-plugin/src/Resources/views/* templates/bu
 7. Dodaj nową metodę płatności klikając Utwórz i wybierz metodę Blue Media płatności online
 8. Przejdź do konfiguracji modułu
 
-
 ## Konfiguracja
 ### Konfiguracja podstawowych pól wtyczki
 
