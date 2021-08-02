@@ -40,7 +40,6 @@ bluemedia_sylius_bluepayment_payment:
 5. Wykonaj polecenia:
 ``` bash
 mkdir -p templates/bundles/SyliusAdminBundle/
-
 cp -R vendor/bluepayment-plugin/sylius-plugin/src/Resources/views/* templates/bundles/
 ```
 6. Przejdź do zakładki Metody płatności
