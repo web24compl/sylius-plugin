@@ -5,8 +5,8 @@
     "description": "Blue Media Payment Plugin for Sylius based ecommerce",
     "license": "LGPL-3.0-only",
     "require": {
-        "php": "^7.3",
-        "sylius/sylius": "^1.7.4",
+        "php": "^8.1",
+        "sylius/sylius": "^1.12",
         "bluepayment-plugin/bm-sdk": "1.0.1"
     },
     "require-dev": {
